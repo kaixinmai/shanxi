@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
+    "build:pages": "tsc --noEmit && vite build --base=/shanxi-project/",
+    "deploy:pages": "npm run build:pages && node scripts/deploy-gitee-pages.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
